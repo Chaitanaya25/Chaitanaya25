@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=A960FF&center=true&vCenter=true&multiline=true&repeat=true&width=650&height=80&lines=%F0%9F%94%A7+Shipping+Production+RAG+%26+Agentic+AI;%F0%9F%A4%96+100%2B+Real+Customer+Queries%2FMonth;%F0%9F%8E%AF+4+Deployed+ML+Projects" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=A960FF&center=true&vCenter=true&multiline=true&repeat=true&width=650&height=80&lines=%F0%9F%94%A7+Shipping+Production+RAG+%26+Agentic+AI;%F0%9F%A4%96+100%2B+Real+Customer+Queries%2FMonth;%F0%9F%8E%AF+4+Shipped+ML+Projects" />
 </p>
 
 ---
@@ -85,8 +85,7 @@
     <td width="50%">
       <h3 align="center"><a href="https://github.com/Chaitanaya25/ResumeIQ">📄 ResumeIQ</a></h3>
       <p align="center"><code>NLP</code> <code>FastAPI</code> <code>React</code> <code>Docker</code></p>
-      <p align="center">AI resume &amp; job-match analyzer — 4-component weighted ATS scoring engine with Sentence Transformers and an 81-skill taxonomy for gap analysis. Deployed on Render &amp; Vercel.</p>
-      <p align="center"><a href="https://resume-iq-taupe.vercel.app"><img src="https://img.shields.io/badge/Live_Demo-6C63FF?style=for-the-badge&logoColor=white" /></a></p>
+      <p align="center">AI resume &amp; job-match analyzer — 4-component weighted ATS scoring engine with Sentence Transformers and an 81-skill taxonomy for gap analysis. Dockerized, built for deployment on Render &amp; Vercel.</p>
     </td>
   </tr>
   <tr>
