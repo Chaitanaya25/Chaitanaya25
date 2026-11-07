@@ -1,209 +1,165 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F0C29,50:302B63,100:24243e&height=260&section=header&text=Chaitanaya%20Srivastava&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Machine%20Learning%20Engineer%20%E2%80%94%20Shipping%20Production%20AI%20Systems&descSize=17&descAlignY=55" width="100%"/>
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg">
+  <img src="assets/hero.svg" alt="Chaitanaya Srivastava, Data Science and ML Engineer. B.Tech Computer Science (Data Science), Galgotias University, class of 2028. Open to Data Science, Analytics and ML internships." width="100%">
+</picture>
 
-<br/>
+<br>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1200&color=B47EFF&center=true&vCenter=true&width=700&lines=Deployed+a+live+RAG+chatbot+handling+100%2B+queries%2Fmonth;Building+agentic+multi-agent+systems+with+LangGraph;Now+building+systems-level+infra+%E2%80%94+WAL%2FLSM+storage+engines"/>
-
-<br/><br/>
-
-<a href="https://www.linkedin.com/in/chaitanaya052006">
-  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
-</a>
-<a href="https://leetcode.com/u/Chaitanaya_25/">
-  <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black"/>
-</a>
-<a href="mailto:Chaitanyasrivastava63@gmail.com">
-  <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/>
-</a>
-<a href="https://github.com/Chaitanaya25">
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
-</a>
+<a href="https://hypertos.in"><img src="assets/btn-portfolio.svg" alt="Portfolio: hypertos.in" height="44"></a>
+<a href="https://www.linkedin.com/in/chaitanaya052006"><img src="assets/btn-linkedin.svg" alt="LinkedIn: chaitanaya052006" height="44"></a>
+<a href="mailto:Chaitanyasrivastava63@gmail.com"><img src="assets/btn-email.svg" alt="Email: Chaitanyasrivastava63@gmail.com" height="44"></a>
 
 </div>
 
-<br/>
+<details>
+<summary><b>Contents</b></summary>
 
-## 👋 About Me
+- [At a glance](#at-a-glance)
+- [Skills](#skills)
+- [Featured projects](#featured-projects)
+- [Experience](#experience)
+- [Other projects](#other-projects)
+- [Education](#education)
+- [Activity](#activity)
 
-```yaml
-role:        Machine Learning Engineer (Freelance) + CS Undergraduate
-education:   B.Tech, Computer Science (Data Science) — Galgotias University, 2024–2028
-focus:       RAG pipelines · Agentic AI (LangGraph) · Full-stack ML deployment
-in_prod:     Live RAG chatbot deployed for a real business, 100+ customer queries/month
-currently:   Building a WAL-backed LSM-tree storage engine from scratch (Go)
-```
+</details>
 
-I don't just prototype in notebooks — I ship. Every project below is deployed, benchmarked, or backed by a real production metric. I care about the difference between *"it works on my machine"* and *"it survives a crash / handles real traffic / holds up under load."*
+## At a glance
 
-<br/>
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg">
+  <img src="assets/stats.svg" alt="100+ queries per month in production. About 95% retrieval accuracy. Average reply time cut from 20 minutes to under 30 seconds. 99.19% validation accuracy. 87,000+ training images." width="100%">
+</picture>
 
-## 🧰 Tech Arsenal
+## Skills
 
-<table>
-<tr>
-<td valign="top" width="50%">
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="assets/marquee-light.svg">
+  <img src="assets/marquee.svg" alt="Scrolling skills: Python, SQL, Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn, PostgreSQL, PyTorch, TensorFlow/Keras, Hugging Face, LangChain, LangGraph, FastAPI, Docker, React, TypeScript and more, listed in the table below." width="100%">
+</picture>
 
-**Languages**
-<br/>
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
-<img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white"/>
-<img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white"/>
-<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white"/>
-<img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white"/>
+| Area | Stack |
+|---|---|
+| **Data Science & Analytics** | `Python` `SQL` `Pandas` `NumPy` `Matplotlib` `Seaborn` `PostgreSQL` `Scikit-Learn` `Exploratory data analysis` `Model evaluation` `Feature engineering` |
+| **ML & AI** | `PyTorch` `TensorFlow/Keras` `Hugging Face` `Sentence Transformers` `LangChain` `LangGraph` `OpenAI API` `RAG pipelines` `CNNs` `NLP` `Agentic workflows` |
+| **Backend & DevOps** | `FastAPI` `Docker` `GitHub Actions` `AWS EC2` `n8n` `Vercel` `Render` `WebSockets` `JWT auth` |
+| **Frontend** | `React` `TypeScript` `Vite` `Tailwind CSS` `shadcn/ui` |
+| **Databases** | `PostgreSQL` `Supabase` `MongoDB` |
+| **Languages** | `Python` `C++` `Java` `TypeScript` `Go` `SQL` |
 
-**ML & AI**
-<br/>
-<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white"/>
-<img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white"/>
-<img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white"/>
-<img src="https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black"/>
-<img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white"/>
-<img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square"/>
-<img src="https://img.shields.io/badge/OpenAI_API-412991?style=flat-square&logo=openai&logoColor=white"/>
+## Featured projects
 
-**Data & Evaluation**
-<br/>
-<img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white"/>
-<img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white"/>
-<img src="https://img.shields.io/badge/Matplotlib-11557C?style=flat-square"/>
-<img src="https://img.shields.io/badge/Seaborn-4C72B0?style=flat-square"/>
+### Chronicle: Durable Agent Runtime + Time-Travel Debugger
 
-</td>
-<td valign="top" width="50%">
+**Status: `LIVE`** (shipped)
 
-**Backend & DevOps**
-<br/>
-<img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white"/>
-<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white"/>
-<img src="https://img.shields.io/badge/n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white"/>
-<img src="https://img.shields.io/badge/AWS_EC2-FF9900?style=flat-square&logo=amazonaws&logoColor=white"/>
-<img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white"/>
-<img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white"/>
-<img src="https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=white"/>
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="assets/chronicle-flow-light.svg">
+  <img src="assets/chronicle-flow.svg" alt="Chronicle architecture. An agent run appends events to a PostgreSQL event log. Worker A processes the run and is killed. Its lease expires and Worker B resumes from the last recorded step in the log. A timeline scrubber replays or inspects any step." width="100%">
+</picture>
 
-**Frontend**
-<br/>
-<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black"/>
-<img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white"/>
-<img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white"/>
-<img src="https://img.shields.io/badge/shadcn%2Fui-000000?style=flat-square"/>
+- Agent runs are persisted as a durable event log in PostgreSQL, so a run survives crashes: kill a worker mid-run and another worker resumes from the log.
+- A time-travel debugger lets you scrub a run's timeline and replay or inspect any step.
+- RepoPilot is the demo agent: it reads a codebase and fixes an issue.
+- Built-in evals with a regression gate, plus benchmarks. The gate fails when a single word of the agent prompt changes.
 
-**Databases**
-<br/>
-<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white"/>
-<img src="https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white"/>
-<img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white"/>
+| Worker kills survived | Duplicated side effects | Runtime checks passed |
+|:---:|:---:|:---:|
+| **200** real kills, 144 runs | **0** across 1,112 keyed effects | **8 of 8** |
 
-</td>
-</tr>
-</table>
+*Measured on one Windows 11 machine with PostgreSQL 16 in Docker.*
 
-<br/>
+**Stack:** `Python` `PostgreSQL` `Docker` `OpenAI-compatible LLM endpoint` `React` `TypeScript`
 
-## 💼 Experience
+<a href="https://chronicle.hypertos.in"><img src="assets/btn-demo.svg" alt="Open the Chronicle live demo: chronicle.hypertos.in" height="44"></a>
 
-<table>
-<tr>
-<td>
+<br>
 
-### ML Engineer (Freelance) — Lakmé Salon, Patna
-**Feb 2026 – Mar 2026**
+### Mini LLM Inference Server
 
-Built and deployed a production RAG-powered customer service system, live and handling real traffic.
+**Status: `IN PROGRESS`** (with an optional routing layer on top)
 
-- 🎯 Architected a **RAG pipeline** with vector search + PostgreSQL trigram fuzzy matching → **~95% retrieval accuracy** across 50+ service/pricing queries
-- ⚡ Built a round-the-clock **Instagram DM auto-response system** via GPT-4.1-mini + n8n agentic workflows → cut average reply time from **20 minutes to under 30 seconds**
-- 🚀 Hosted on a VPS with webhook integration, managing real-time session state across concurrent conversations, **100+ queries/month** in production
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="assets/inference-flow-light.svg">
+  <img src="assets/inference-flow.svg" alt="Mini LLM Inference Server schematic. Requests enter a batcher, the model decodes using a KV cache, and tokens stream out. An optional router sits in front. Benchmarks are planned." width="100%">
+</picture>
 
-</td>
-</tr>
-</table>
+- Request batching across concurrent requests
+- KV-cache management
+- Streaming token output
+- Latency and throughput benchmarking
+- Optional model router
 
-<br/>
+<br>
 
-## 🏗️ Featured Projects
+### Raft Cluster + Jepsen-style Checker
 
-<table>
-<tr>
-<td width="50%" valign="top">
+**Status: `PLANNED`** (distributed systems track; alternative: Retrieval Lab)
 
-### 🎙️ SAGE
-**Smart Agentic Grading & Evaluation System**
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="assets/raft-flow-light.svg">
+  <img src="assets/raft-flow.svg" alt="Planned distributed systems project schematic. A five-node Raft cluster elects a new leader after the old leader fails, while a Jepsen-style checker scans a recorded client history. Alternative track: Retrieval Lab." width="100%">
+</picture>
 
-`LangGraph` `FastAPI` `React 19` `TypeScript` `WebSockets`
+## Experience
 
-Autonomous AI recruitment interview platform driven by a **5-agent state graph** — Greeter, Interviewer, Evaluator, Scorer, Reporter — orchestrating adaptive technical interviews.
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="assets/experience-light.svg">
+  <img src="assets/experience.svg" alt="ML Engineer (Freelance), Lakmé Salon, Patna, February to March 2026. Average reply time cut from 20 minutes to under 30 seconds." width="100%">
+</picture>
 
-- Real-time voice interview loop: STT + TTS + GPT-4o over streaming WebSockets
-- Full-stack delivery: FastAPI + React 19 + Vite + Tailwind, JWT auth, PostgreSQL backend
-- HR dashboard for live candidate evaluation tracking
+- Architected a production RAG pipeline (vector search + PostgreSQL trigram fuzzy matching), ~95% retrieval accuracy across 50+ service/pricing queries.
+- Built an Instagram DM auto-response system (GPT-4.1-mini + n8n agentic workflows), cutting average reply time from 20 minutes to under 30 seconds.
+- Deployed on a VPS with webhooks and real-time session state across concurrent conversations, 100+ queries/month in production.
 
-</td>
-<td width="50%" valign="top">
+## Other projects
 
-### 📄 [ResumeIQ](https://github.com/Chaitanaya25/ResumeIQ)
-**AI Resume & Job-Match Analyzer**
+<details>
+<summary><b>SAGE</b>: Smart Agentic Grading & Evaluation System &nbsp;·&nbsp; <code>LangGraph</code> <code>FastAPI</code> <code>React 19</code></summary>
 
-`NLP` `Sentence Transformers` `FastAPI` `React` `Docker`
+- 5-agent LangGraph state graph (Greeter, Interviewer, Evaluator, Scorer, Reporter) running adaptive technical interviews.
+- Real-time voice loop with STT + TTS + GPT-4o over streaming WebSockets.
+- FastAPI + React 19 + Vite + Tailwind, JWT auth, PostgreSQL; HR dashboard.
 
-A 4-component weighted ATS scoring engine that goes beyond keyword matching.
+</details>
 
-- Sentence Transformers (`all-MiniLM-L6-v2`) + NLP entity extraction
-- **81-skill taxonomy** for structured gap analysis
-- Dockerized full-stack app with PDF/DOCX parsing and real-time score feedback
+<details>
+<summary><b>ResumeIQ</b>: AI Resume & Job-Match Analyzer &nbsp;·&nbsp; <code>Sentence Transformers</code> <code>FastAPI</code> <code>Docker</code></summary>
 
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+- 4-component weighted ATS scoring engine.
+- Sentence Transformers (all-MiniLM-L6-v2) + NLP entity extraction.
+- 81-skill taxonomy for gap analysis.
+- Dockerized FastAPI + React app with PDF/DOCX parsing.
 
-### 🌿 [Plant Disease CNN](https://github.com/Chaitanaya25/plant-disease-detection-cnn)
-**Computer Vision — Leaf Disease Classification**
+</details>
 
-`TensorFlow` `Keras` `CNN`
+<details>
+<summary><b>Plant Disease CNN</b> &nbsp;·&nbsp; <code>TensorFlow/Keras</code> &nbsp;·&nbsp; 99.19% validation accuracy</summary>
 
-A convolutional network trained end-to-end on a large real-world leaf image dataset.
+- TensorFlow/Keras CNN trained on 87,000+ leaf images across 38 classes.
+- 99.19% validation accuracy with a custom augmentation pipeline.
 
-- Trained on **87,000+ leaf images** across **38 disease classes**
-- **99.19% validation accuracy** with a custom data augmentation pipeline
-- Built to generalize across varied lighting, angle, and leaf condition
+</details>
 
-</td>
-<td width="50%" valign="top">
+<details>
+<summary><b>SignBridge</b>: Real-Time ASL Alphabet Recognition &nbsp;·&nbsp; <code>MediaPipe</code> <code>PyTorch</code></summary>
 
-### 🤟 SignBridge
-**Real-Time ASL Alphabet Recognition**
+- MediaPipe hand landmarks feeding a PyTorch classifier, 29 gesture classes in real time.
+- CI/CD with GitHub Actions, Docker, AWS EC2.
 
-`PyTorch` `MediaPipe` `Docker` `CI/CD`
+</details>
 
-A real-time hand-gesture recognition system built on landmark tracking rather than raw pixels.
+## Education
 
-- MediaPipe hand landmark detection feeding a PyTorch classifier
-- Recognizes **29 gesture classes** in real time
-- CI/CD via GitHub Actions, containerized and deployed on AWS EC2
+**B.Tech Computer Science (Data Science)**, Galgotias University, 2024–2028.
 
-</td>
-</tr>
-</table>
+## Activity
 
-<br/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Chaitanaya25/Chaitanaya25/output/github-snake-dark.svg">
+  <img src="https://raw.githubusercontent.com/Chaitanaya25/Chaitanaya25/output/github-snake.svg" alt="GitHub contribution graph animation" width="100%">
+</picture>
 
-## 📡 Currently Building
-
-```diff
-+ StoreForge — WAL-backed LSM-tree key-value store, built from scratch in Go
-+ Deepfake Detection System — Hybrid CNN + FFT with EfficientNet-B4
-! First project in a 3-part systems chain: storage engine → Raft replication → agent observability
-```
-
-<br/>
-
-<div align="center">
-
-### 🎯 Open to ML/AI Internship Opportunities
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:24243e,50:302B63,100:0F0C29&height=120&section=footer" width="100%"/>
-
-</div>
+<img src="assets/divider.svg" alt="" width="100%">
