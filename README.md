@@ -1,165 +1,131 @@
-<div align="center">
-
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg">
-  <img src="assets/hero.svg" alt="Chaitanaya Srivastava, Data Science and ML Engineer. B.Tech Computer Science (Data Science), Galgotias University, class of 2028. Open to Data Science, Analytics and ML internships." width="100%">
+  <source media="(prefers-color-scheme: light)" srcset="assets/hero-day.svg">
+  <img src="assets/hero-dusk.svg" width="100%" alt="A small floating island with a stone tower, a flag and a hooded figure waving a lantern. Name: Chaitanaya Srivastava. Backend systems, AI infrastructure, ML. A banner on the tower reads open to internships. Stairs lead down to the next island.">
 </picture>
 
-<br>
+<a href="https://hypertos.in"><img src="assets/post-portfolio-dusk.svg#gh-dark-mode-only" width="180" alt="Portfolio: hypertos.in"><img src="assets/post-portfolio-day.svg#gh-light-mode-only" width="180" alt="Portfolio: hypertos.in"></a> <a href="https://www.linkedin.com/in/chaitanaya052006"><img src="assets/post-linkedin-dusk.svg#gh-dark-mode-only" width="180" alt="LinkedIn: chaitanaya052006"><img src="assets/post-linkedin-day.svg#gh-light-mode-only" width="180" alt="LinkedIn: chaitanaya052006"></a> <a href="https://leetcode.com/u/Chaitanaya_25/"><img src="assets/post-leetcode-dusk.svg#gh-dark-mode-only" width="180" alt="LeetCode: Chaitanaya_25"><img src="assets/post-leetcode-day.svg#gh-light-mode-only" width="180" alt="LeetCode: Chaitanaya_25"></a> <a href="mailto:Chaitanyasrivastava63@gmail.com"><img src="assets/post-email-dusk.svg#gh-dark-mode-only" width="180" alt="Email: Chaitanyasrivastava63@gmail.com"><img src="assets/post-email-day.svg#gh-light-mode-only" width="180" alt="Email: Chaitanyasrivastava63@gmail.com"></a>
 
-<a href="https://hypertos.in"><img src="assets/btn-portfolio.svg" alt="Portfolio: hypertos.in" height="44"></a>
-<a href="https://www.linkedin.com/in/chaitanaya052006"><img src="assets/btn-linkedin.svg" alt="LinkedIn: chaitanaya052006" height="44"></a>
-<a href="mailto:Chaitanyasrivastava63@gmail.com"><img src="assets/btn-email.svg" alt="Email: Chaitanyasrivastava63@gmail.com" height="44"></a>
+I build backend systems, AI infrastructure and ML. Open to backend, ML and AI engineering internships.
 
-</div>
+[Portfolio](https://hypertos.in) · [LinkedIn](https://www.linkedin.com/in/chaitanaya052006) · [LeetCode](https://leetcode.com/u/Chaitanaya_25/) · [Email](mailto:Chaitanyasrivastava63@gmail.com)
 
-<details>
-<summary><b>Contents</b></summary>
+## Chronicle: durable agent runtime
 
-- [At a glance](#at-a-glance)
-- [Skills](#skills)
-- [Featured projects](#featured-projects)
-- [Experience](#experience)
-- [Other projects](#other-projects)
-- [Education](#education)
-- [Activity](#activity)
-
-</details>
-
-## At a glance
+`LIVE` Python, PostgreSQL, Docker, React, TypeScript.
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg">
-  <img src="assets/stats.svg" alt="100+ queries per month in production. About 95% retrieval accuracy. Average reply time cut from 20 minutes to under 30 seconds. 99.19% validation accuracy. 87,000+ training images." width="100%">
+  <source media="(prefers-color-scheme: light)" srcset="assets/chronicle-day.svg">
+  <img src="assets/chronicle-dusk.svg" width="100%" alt="An aqueduct bridge carries a conveyor belt: the append-only event log. Teal workers put blocks on the belt and they settle in an ordered row. One worker trips and his block flies off and hangs in the air; he is fenced out. An hourglass drains over three seconds, then a terracotta worker runs in, catches the block and places it as the next step, with no gap and no duplicate. A rewind wheel turns back along the blocks. Status: LIVE.">
 </picture>
+
+Chronicle lets AI agents survive crashes, and be rewound like a video.
+
+1. **Every step is logged.** Each agent step is appended to a PostgreSQL event log, in order, and the log only grows.
+2. **A worker crashes.** Workers own a run through a lease with heartbeats. A crash leaves the log untouched.
+3. **The lease runs out.** After the 3 s lease TTL another worker claims the run with a compare-and-swap; epoch fencing locks the old one out.
+4. **The next worker resumes.** The run continues from the next step, with no lost or repeated steps.
+
+- Time-travel debugger: replay, fork and diff any run. Replay checks recompute recorded LLM request hashes to catch prompt drift.
+- CI regression gate: 8/8 deterministic runtime checks plus a 25-task eval suite. The build fails on any duplicated effect or behaviour change; a deliberately changed prompt made it fail. RepoPilot is the demo coding agent.
+
+| Measure | Result |
+|:--|:--|
+| Chaos test | 200 worker kills across 144 runs, 0 duplicated side effects in 1,112 keyed effects |
+| Recovery at a 3 s lease TTL | p50 3.027 s · p95 3.459 s · max 3.865 s |
+| Event store | 481.5 events/s with 1 writer · 1,818 events/s with 4 writers (3.8x) |
+| Append latency | p95 2.8 ms |
+
+*Measured on one Windows 11 machine (28 logical CPUs), Python 3.12, PostgreSQL 16 in Docker. No model resolve rate is claimed; it has not been run.*
+
+<a href="https://chronicle.hypertos.in"><img src="assets/post-demo-dusk.svg#gh-dark-mode-only" width="215" alt="Open the Chronicle live demo: chronicle.hypertos.in"><img src="assets/post-demo-day.svg#gh-light-mode-only" width="215" alt="Open the Chronicle live demo: chronicle.hypertos.in"></a>
+
+## Mini LLM inference server
+
+`IN PROGRESS` Python, PyTorch, Hugging Face Transformers, FastAPI.
+
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="assets/inference-day.svg">
+  <img src="assets/inference-dusk.svg" width="100%" alt="Schematic, in progress. A terracotta-roofed workshop with open shelves, the cache. Workers carrying blocks queue at its door: requests. Three go in together as a batch and a fourth slips in mid-way as a slot frees. Shelves fill with small blocks as each request works and empty when it finishes. Paper planes fly out of the window to three mailboxes: tokens streaming out.">
+</picture>
+
+A small server that runs a language model for many users at once.
+
+1. **Requests queue.** Incoming requests wait at the door.
+2. **A batch shares the GPU.** Requests run together, and a new one joins mid-flight when a slot frees (continuous batching).
+3. **The cache fills and frees.** Each request's KV cache grows as it decodes and is freed when it finishes.
+4. **Tokens stream out.** Each client receives its answer token by token over SSE. An optional router can spread work across model backends.
+
+Benchmarks planned: time-to-first-token, tokens/s and p50/p95 latency, against one request at a time. No results yet.
+
+## Raft cluster + consistency checker
+
+`PLANNED` Go, Docker.
+
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="assets/raft-day.svg">
+  <img src="assets/raft-dusk.svg" width="100%" alt="Schematic, planned. Five houses stand in a ring on a round island; the leader's house wears the only crown. Letter-birds carry envelopes from the leader to every house. A dashed fence slides across the island, cutting off the leader and one neighbour. On the majority side one house asks its neighbours for votes; two reply, and the crown hops to the new leader. The fence lifts and the old leader settles back to follower.">
+</picture>
+
+A replicated key-value store, plus a Jepsen-style checker that tries to break it.
+
+1. **The leader replicates.** It sends log entries and heartbeats to every follower.
+2. **The network splits.** A partition cuts the leader off, with at most one other node.
+3. **The majority elects.** A node on the majority side times out, asks for votes, wins a majority and leads a new term. A minority never elects.
+4. **The cluster heals.** The old leader steps down and catches up.
+
+Planned: leader election, log replication, snapshotting, partition and crash injection, and linearizability checking of recorded client histories. No results yet.
+
+## Experience: AI business assistant
+
+ML Engineer (Freelance) · Feb 2026 – Mar 2026 · built for a salon business in Patna.
+
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="assets/assistant-day.svg">
+  <img src="assets/assistant-dusk.svg" width="100%" alt="A small harbour with a dock, a shop with a striped awning and a sign reading AI ASSISTANT, a lamppost and a stopwatch. A boat arrives with a speech bubble: a customer message. In the shop window two shelves light up in parallel, meaning and spelling, and their results merge on the counter: hybrid search. A reply bubble flies back to the boat. The stopwatch arc shrinks from 20 minutes to under 30 seconds. Two more boats bob at the dock: separate conversations kept apart.">
+</picture>
+
+1. **A message arrives** through an Instagram webhook.
+2. **Hybrid search** runs vector similarity and PostgreSQL trigram matching side by side and merges the results.
+3. **An instant reply** is written by GPT-4.1-mini with n8n workflows.
+4. **Conversations stay apart.** Each chat keeps its own session state, so concurrent chats never mix.
+
+- Hybrid retrieval: vector similarity search plus PostgreSQL trigram fuzzy matching (pg_trgm), ~95% retrieval accuracy on 50+ service and pricing queries.
+- 24/7 Instagram DM auto-responder on GPT-4.1-mini with n8n agentic workflows. Average first response went from 20 minutes to under 30 seconds (40x faster).
+- Deployed on a VPS behind Instagram webhooks, with per-conversation session state for concurrent chats. 100+ customer queries/month in production.
+
+## Selected work
+
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="assets/work-day.svg">
+  <img src="assets/work-dusk.svg" width="100%" alt="Four small islands joined by arches. SAGE: a round table with five chairs and a glowing token moving chair to chair. ResumeIQ: a scroll whose lines fly into a grid of 81 dots, then a four-part ring fills. Plant CNN: a magnifying glass over a leaf, layered squares and a row of bars, tagged 99.19%. SignBridge: a stone hand whose joints connect into a skeleton, a letter rising beside it and one of 29 pips lit.">
+</picture>
+
+| Project | What it does | Built with |
+|:--|:--|:--|
+| **SAGE** | Runs adaptive technical interviews with a 5-agent LangGraph state graph (Greeter, Interviewer, Evaluator, Scorer, Reporter) and a real-time voice loop. | LangGraph, FastAPI, React 19, TypeScript, WebSockets, PostgreSQL, JWT auth, GPT-4o |
+| **ResumeIQ** | Scores resumes against jobs with a 4-component weighted ATS engine and an 81-skill taxonomy. | Sentence Transformers (all-MiniLM-L6-v2), FastAPI, React, Docker, PDF/DOCX parsing |
+| **Plant CNN** | Classifies leaf diseases across 38 classes, 99.19% validation accuracy on 87,000+ images. | TensorFlow/Keras, custom augmentation |
+| **SignBridge** | Recognises the ASL alphabet in real time, 29 gesture classes, from hand landmarks. | MediaPipe, PyTorch, GitHub Actions, Docker, AWS EC2 |
 
 ## Skills
 
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/marquee-light.svg">
-  <img src="assets/marquee.svg" alt="Scrolling skills: Python, SQL, Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn, PostgreSQL, PyTorch, TensorFlow/Keras, Hugging Face, LangChain, LangGraph, FastAPI, Docker, React, TypeScript and more, listed in the table below." width="100%">
-</picture>
-
 | Area | Stack |
-|---|---|
-| **Data Science & Analytics** | `Python` `SQL` `Pandas` `NumPy` `Matplotlib` `Seaborn` `PostgreSQL` `Scikit-Learn` `Exploratory data analysis` `Model evaluation` `Feature engineering` |
-| **ML & AI** | `PyTorch` `TensorFlow/Keras` `Hugging Face` `Sentence Transformers` `LangChain` `LangGraph` `OpenAI API` `RAG pipelines` `CNNs` `NLP` `Agentic workflows` |
-| **Backend & DevOps** | `FastAPI` `Docker` `GitHub Actions` `AWS EC2` `n8n` `Vercel` `Render` `WebSockets` `JWT auth` |
-| **Frontend** | `React` `TypeScript` `Vite` `Tailwind CSS` `shadcn/ui` |
-| **Databases** | `PostgreSQL` `Supabase` `MongoDB` |
-| **Languages** | `Python` `C++` `Java` `TypeScript` `Go` `SQL` |
-
-## Featured projects
-
-### Chronicle: Durable Agent Runtime + Time-Travel Debugger
-
-**Status: `LIVE`** (shipped)
-
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/chronicle-flow-light.svg">
-  <img src="assets/chronicle-flow.svg" alt="Chronicle architecture. An agent run appends events to a PostgreSQL event log. Worker A processes the run and is killed. Its lease expires and Worker B resumes from the last recorded step in the log. A timeline scrubber replays or inspects any step." width="100%">
-</picture>
-
-- Agent runs are persisted as a durable event log in PostgreSQL, so a run survives crashes: kill a worker mid-run and another worker resumes from the log.
-- A time-travel debugger lets you scrub a run's timeline and replay or inspect any step.
-- RepoPilot is the demo agent: it reads a codebase and fixes an issue.
-- Built-in evals with a regression gate, plus benchmarks. The gate fails when a single word of the agent prompt changes.
-
-| Worker kills survived | Duplicated side effects | Runtime checks passed |
-|:---:|:---:|:---:|
-| **200** real kills, 144 runs | **0** across 1,112 keyed effects | **8 of 8** |
-
-*Measured on one Windows 11 machine with PostgreSQL 16 in Docker.*
-
-**Stack:** `Python` `PostgreSQL` `Docker` `OpenAI-compatible LLM endpoint` `React` `TypeScript`
-
-<a href="https://chronicle.hypertos.in"><img src="assets/btn-demo.svg" alt="Open the Chronicle live demo: chronicle.hypertos.in" height="44"></a>
-
-<br>
-
-### Mini LLM Inference Server
-
-**Status: `IN PROGRESS`** (with an optional routing layer on top)
-
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/inference-flow-light.svg">
-  <img src="assets/inference-flow.svg" alt="Mini LLM Inference Server schematic. Requests enter a batcher, the model decodes using a KV cache, and tokens stream out. An optional router sits in front. Benchmarks are planned." width="100%">
-</picture>
-
-- Request batching across concurrent requests
-- KV-cache management
-- Streaming token output
-- Latency and throughput benchmarking
-- Optional model router
-
-<br>
-
-### Raft Cluster + Jepsen-style Checker
-
-**Status: `PLANNED`** (distributed systems track; alternative: Retrieval Lab)
-
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/raft-flow-light.svg">
-  <img src="assets/raft-flow.svg" alt="Planned distributed systems project schematic. A five-node Raft cluster elects a new leader after the old leader fails, while a Jepsen-style checker scans a recorded client history. Alternative track: Retrieval Lab." width="100%">
-</picture>
-
-## Experience
-
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/experience-light.svg">
-  <img src="assets/experience.svg" alt="ML Engineer (Freelance), Lakmé Salon, Patna, February to March 2026. Average reply time cut from 20 minutes to under 30 seconds." width="100%">
-</picture>
-
-- Architected a production RAG pipeline (vector search + PostgreSQL trigram fuzzy matching), ~95% retrieval accuracy across 50+ service/pricing queries.
-- Built an Instagram DM auto-response system (GPT-4.1-mini + n8n agentic workflows), cutting average reply time from 20 minutes to under 30 seconds.
-- Deployed on a VPS with webhooks and real-time session state across concurrent conversations, 100+ queries/month in production.
-
-## Other projects
-
-<details>
-<summary><b>SAGE</b>: Smart Agentic Grading & Evaluation System &nbsp;·&nbsp; <code>LangGraph</code> <code>FastAPI</code> <code>React 19</code></summary>
-
-- 5-agent LangGraph state graph (Greeter, Interviewer, Evaluator, Scorer, Reporter) running adaptive technical interviews.
-- Real-time voice loop with STT + TTS + GPT-4o over streaming WebSockets.
-- FastAPI + React 19 + Vite + Tailwind, JWT auth, PostgreSQL; HR dashboard.
-
-</details>
-
-<details>
-<summary><b>ResumeIQ</b>: AI Resume & Job-Match Analyzer &nbsp;·&nbsp; <code>Sentence Transformers</code> <code>FastAPI</code> <code>Docker</code></summary>
-
-- 4-component weighted ATS scoring engine.
-- Sentence Transformers (all-MiniLM-L6-v2) + NLP entity extraction.
-- 81-skill taxonomy for gap analysis.
-- Dockerized FastAPI + React app with PDF/DOCX parsing.
-
-</details>
-
-<details>
-<summary><b>Plant Disease CNN</b> &nbsp;·&nbsp; <code>TensorFlow/Keras</code> &nbsp;·&nbsp; 99.19% validation accuracy</summary>
-
-- TensorFlow/Keras CNN trained on 87,000+ leaf images across 38 classes.
-- 99.19% validation accuracy with a custom augmentation pipeline.
-
-</details>
-
-<details>
-<summary><b>SignBridge</b>: Real-Time ASL Alphabet Recognition &nbsp;·&nbsp; <code>MediaPipe</code> <code>PyTorch</code></summary>
-
-- MediaPipe hand landmarks feeding a PyTorch classifier, 29 gesture classes in real time.
-- CI/CD with GitHub Actions, Docker, AWS EC2.
-
-</details>
-
-## Education
-
-**B.Tech Computer Science (Data Science)**, Galgotias University, 2024–2028.
+|:--|:--|
+| **Languages** | Python · Go · C++ · Java · SQL · TypeScript |
+| **Backend & Systems** | FastAPI · REST APIs · WebSockets · PostgreSQL · Event Sourcing · Lease-Based Failover · Raft Consensus |
+| **ML & AI** | PyTorch · TensorFlow/Keras · Scikit-Learn · Hugging Face Transformers · Sentence Transformers · LangGraph · LangChain · RAG · LLM Evaluation |
+| **Data** | Pandas · NumPy · Matplotlib · Seaborn · EDA · Model Evaluation (F1, Precision, Recall, AUC) |
+| **DevOps & Tools** | Docker · Git · GitHub Actions · AWS EC2 · n8n · Vercel |
+| **Frontend & Data stores** | React · Tailwind CSS · MongoDB · Supabase |
 
 ## Activity
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Chaitanaya25/Chaitanaya25/output/github-snake-dark.svg">
-  <img src="https://raw.githubusercontent.com/Chaitanaya25/Chaitanaya25/output/github-snake.svg" alt="GitHub contribution graph animation" width="100%">
+  <source media="(prefers-color-scheme: light)" srcset="assets/activity-day.svg">
+  <img src="assets/activity-dusk.svg" width="100%" alt="The past year of GitHub contributions as a field of small isometric tiles, oldest week at the left. Quiet days are pale, active days sand, the busiest terracotta. A lighthouse beam sweeps across the tiles. Rebuilt daily from the GitHub API.">
 </picture>
 
-<img src="assets/divider.svg" alt="" width="100%">
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="assets/footer-day.svg">
+  <img src="assets/footer-dusk.svg" width="100%" alt="A lighthouse on a cliff above a calm sea, a sun by day and a moon at dusk, and a tiny hooded figure on the cliff edge reading a book. Backend systems, AI infrastructure, ML.">
+</picture>
